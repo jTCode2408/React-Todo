@@ -39,7 +39,9 @@ console.log(this.state);
 <button>
     Add
 </button>
+<button className = "clear"onClick={this.props.clearComplete}> Clear Completed </button>
         </form>
+       
     );
 }
 }
