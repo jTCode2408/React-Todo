@@ -34,14 +34,14 @@ console.log(this.state);
     name="todo"
     value = {this.state.todoText}
     onChange = {this.handleChanges}
-    />
+    placeholder = "add task"/>
 
 <button>
     Add
 </button>
-<button className = "clear"onClick={this.props.clearComplete}> Clear Completed </button>
-        </form>
-       
+<button className = "clear" onClick={this.props.clearComplete}> Clear Completed </button>
+</form>
+   
     );
 }
 }
