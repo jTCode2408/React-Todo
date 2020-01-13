@@ -54,13 +54,13 @@ class App extends React.Component {
   };
 
 
-  addToDo = todoTask => {
+  addtodo = task => {
     const newTask ={
-      task: todoTask,
+      task: task,
       id:Date.now(),
       completed:false
     };
-console.log(newTask);
+console.log("new task", newTask);
 
     this.setState({
       todoList: [...this.state.todoList, newTask]
@@ -76,10 +76,10 @@ console.log(newTask);
       <div className = "app-cont">
         <div className = "head">
         <h2>Welcome to your Todo App!</h2>
-        <TodoForm addTodo = {this.addTodo}/>
+        <TodoForm addtodo = {this.addtodo}/>
         </div>
       <TodoList
-      todo = {this.state.todoList}
+      task = {this.state.todoList}
       toggleItem={this.toggleItem}/>
       </div>
     );

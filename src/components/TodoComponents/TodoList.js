@@ -12,12 +12,9 @@ const TodoList = props =>{
        
 <div className = "toDo-List">
 <h2>Things to do:</h2>
-{props.todo.map(todo =>(
+{props.task.map(todo =>(
     <Todo key ={todo.id} task = {todo.task} completed = {props.toggleItem} />
 ))}
-<button className = "add-toDo" onClick={props.addTodo}>
-    Add
-</button>
 </div>
 );
 };
