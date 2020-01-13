@@ -1,8 +1,21 @@
 import React from 'react';
 import TodoList from './components/TodoComponents/TodoList';
-// import TodoForm from './components/TodoComponents/TodoForm'
+import TodoForm from './components/TodoComponents/TodoForm'
 
+const todo =[
+  
+    {
+      task: 'Organize Garage',
+      id: 1528817077286,
+      completed: false
+    },
+    {
+      task: 'Bake Cookies',
+      id: 1528817084358,
+      completed: false
+    }
 
+]
 
 
 class App extends React.Component {
@@ -16,12 +29,12 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-     todoList:'ToDoList'
+     todoList:todo
     };
   }
 
   toggleItem = id =>{
-    const NewtoDo = this.state.TodoList.map(todo =>{
+    const newToDoList = this.state.todoList.map(todo =>{
       if (todo.id ===id ) {
       return {
         ...todo, 
@@ -35,7 +48,7 @@ class App extends React.Component {
 
     this.setState({
 
-      todoList: NewtoDo
+      todoList: newToDoList
     });
 
   };
@@ -47,6 +60,7 @@ class App extends React.Component {
       id:Date.now(),
       completed:false
     };
+console.log(newTask);
 
     this.setState({
       todoList: [...this.state.todoList, newTask]
@@ -62,7 +76,7 @@ class App extends React.Component {
       <div className = "app-cont">
         <div className = "head">
         <h2>Welcome to your Todo App!</h2>
-        {/* <TodoForm addTask = {this.addTask}/> */}
+        <TodoForm addTodo = {this.addTodo}/>
         </div>
       <TodoList
       todo = {this.state.todoList}
