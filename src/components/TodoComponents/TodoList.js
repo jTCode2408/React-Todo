@@ -3,20 +3,16 @@
 //receives Todos array and iterates over the list generating a new <Todo /> for each element in the array.
 import React from 'react';
 import Todo from './Todo';
+const GroceryList = props => {
 
-
-
-const TodoList = props =>{
-
-    return (
-       
-<div className = "toDo-List">
-<h2>Things to do:</h2>
-{props.task.map(todo =>(
-    <Todo key ={todo.id} task = {todo.task} completed = {props.toggleItem} />
-))}
-</div>
-);
+  return (
+    <div className="shopping-list">
+      {props.todo.map(item => (
+        <Todo key={item.id} item={item} toggleItem={props.toggleItem} />
+      ))}
+     
+    </div>
+  );
 };
 
-export default TodoList;
+export default GroceryList;

@@ -21,7 +21,7 @@ this.setState({
 
 handleSubmit = e => {
     e.preventDefault()
-    this.props.addtodo(this.state.todoText);
+    this.props.addItem(this.state.todoText);
 };
 
 render (){

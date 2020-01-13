@@ -34,14 +34,14 @@ class App extends React.Component {
   }
 
   toggleItem = id =>{
-    const newToDoList = this.state.todoList.map(todo =>{
-      if (todo.id ===id ) {
+    const newToDoList = this.state.todoList.map(item =>{
+      if (item.id ===id ) {
       return {
-        ...todo, 
-        completed: !todo.completed
+        ...item, 
+        completed: !item.completed
       };
      } else {
-        return todo;
+        return item;
       }
     });
 
@@ -54,9 +54,9 @@ class App extends React.Component {
   };
 
 
-  addtodo = task => {
+  addItem = itemName => {
     const newTask ={
-      task: task,
+      task: itemName,
       id:Date.now(),
       completed:false
     };
@@ -76,10 +76,10 @@ console.log("new task", newTask);
       <div className = "app-cont">
         <div className = "head">
         <h2>Welcome to your Todo App!</h2>
-        <TodoForm addtodo = {this.addtodo}/>
+        <TodoForm addItem = {this.addItem}/>
         </div>
       <TodoList
-      task = {this.state.todoList}
+      todo = {this.state.todoList}
       toggleItem={this.toggleItem}/>
       </div>
     );
