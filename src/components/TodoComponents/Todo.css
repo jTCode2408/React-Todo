@@ -1,9 +1,23 @@
 .completed {
     text-decoration: line-through;
-  }
-  
-  .listItem {
-    font-size: 1.2rem;
+
   }
 
+  .task {
+    color: red;
+    font-size:2rem;
+  }
   
+
+  button{
+border-radius:5px;
+background-color: blue;
+color:red;
+text-decoration:none
+
+  }
+
+  input{
+
+    background-color: aqua;
+  }

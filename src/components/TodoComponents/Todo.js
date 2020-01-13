@@ -1,13 +1,5 @@
 import React from 'react';
-import './Todo.css';
-// import styled from 'styled-components';
-//component that takes in the todo data and displays the task to the screen.
-
-
-// const StyledComplete = styled.div`
-// text-decoration: line-through;
-// color:red;
-// `
+// 
 const Todo = props =>{
     console.log("todo", props);
     return (
